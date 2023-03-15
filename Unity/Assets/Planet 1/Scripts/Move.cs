@@ -5,14 +5,14 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speed = 10f;
-    // move the cylinder with thkeys W, A, S, D
+    // move the cylinder with thkeys W, Q, S, D
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.Z))
         {
             transform.Translate(Vector3.forward * (Time.deltaTime * speed));
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.Q))
         {
             transform.Translate(Vector3.left * (Time.deltaTime * speed));
         }
