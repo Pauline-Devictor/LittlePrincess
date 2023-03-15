@@ -129,6 +129,9 @@ GameObject:
   - component: {fileID: 3397283736507386218}
   - component: {fileID: 3397283736507386219}
   - component: {fileID: 3397283736507386216}
+  - component: {fileID: 2842300947516032442}
+  - component: {fileID: 295231191561668962}
+  - component: {fileID: 1383065937308886677}
   m_Layer: 0
   m_Name: LudoCar
   m_TagString: Player
@@ -181,6 +184,62 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5304399, y: 2.2828236, z: 5}
   m_Center: {x: -0.0006752014, y: 0.8780527, z: 0}
+--- !u!114 &2842300947516032442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397283736507386229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30e1eac8be4045598193c01927110af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 295231191561668962}
+        m_TargetAssemblyTypeName: CarMovement, Assembly-CSharp
+        m_MethodName: SetInputs
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &295231191561668962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397283736507386229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962540bd0874b4809ada63925eabfd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 3397283736507386219}
+  forwardMoveSpeed: 100
+  backwardMoveSpeed: -50
+  steerSpeed: 5000
+--- !u!114 &1383065937308886677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397283736507386229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61638b07d6f8b4aa9a20c7f062dd132d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carName: Ludo
 --- !u!1 &3397283736557142802
 GameObject:
   m_ObjectHideFlags: 0
