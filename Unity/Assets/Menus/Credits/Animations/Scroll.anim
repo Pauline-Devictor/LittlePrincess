@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -42, y: -460, z: 5.9499063}
+        value: {x: -42, y: -961, z: 5.9499063}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -30,8 +30,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: {x: -42, y: 93, z: 5.9499063}
-        inSlope: {x: 0, y: 1106, z: 0}
-        outSlope: {x: 0, y: 1106, z: 0}
+        inSlope: {x: 0, y: 1607, z: 0}
+        outSlope: {x: 0, y: 1607, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -130,7 +130,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -460
+        value: -961
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -140,8 +140,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: 93
-        inSlope: 1106
-        outSlope: 1106
+        inSlope: 1607
+        outSlope: 1607
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -202,11 +202,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
