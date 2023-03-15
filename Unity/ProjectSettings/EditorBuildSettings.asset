@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main menu/MainMenu.unity
+    path: Assets/Menus/Main menu/MainMenu.unity
     guid: b9bd46c31ac64814a99be7ca0e898f4c
   - enabled: 1
     path: Assets/Planet 1/Scenes/Planet1.unity
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Planet 3/Scenes/Planet3.unity
     guid: b7651ec336553524e99b96bbebf91b73
+  - enabled: 1
+    path: Assets/Menus/Planet Menu/Planet Menu.unity
+    guid: 36bf61c8b9d3464409f4d3630a16cc0b
+  - enabled: 1
+    path: Assets/Menus/Credits/Credits.unity
+    guid: 70ba7f1520447f040afde0b237220c85
   m_configObjects: {}
