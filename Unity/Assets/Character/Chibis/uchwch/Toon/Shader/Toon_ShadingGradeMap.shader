@@ -205,7 +205,7 @@ Shader "UnityChanToonShader/Toon_ShadingGradeMap" {
             //v.2.0.7
             #pragma multi_compile _EMISSIVE_SIMPLE _EMISSIVE_ANIMATION
             //
-            #include "UCTS_ShadingGradeMap.cginc"
+            #include "Assets/Character/Chibis/uchwch/Toon/Shader/UCTS_ShadingGradeMap.cginc"
 
             ENDCG
         }
@@ -235,7 +235,7 @@ Shader "UnityChanToonShader/Toon_ShadingGradeMap" {
             #pragma multi_compile _IS_TRANSCLIPPING_OFF
             #pragma multi_compile _IS_ANGELRING_OFF
             #pragma multi_compile _IS_PASS_FWDDELTA
-            #include "UCTS_ShadingGradeMap.cginc"
+            #include "Assets/Character/Chibis/uchwch/Toon/Shader/UCTS_ShadingGradeMap.cginc"
 
             ENDCG
         }
