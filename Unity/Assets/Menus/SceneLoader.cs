@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
@@ -25,5 +26,15 @@ public class SceneLoader : MonoBehaviour
     public void LoadCredits()
     {
         SceneManager.LoadScene(5);
+    }
+
+    public void Quit()
+    {
+        #if UNITY_STANDALONE
+            Application.Quit();
+        #endif
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
