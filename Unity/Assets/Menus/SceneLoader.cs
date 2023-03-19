@@ -19,13 +19,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
-    public void LoadMenuPlanet()
-    {
-        SceneManager.LoadScene(4);
-    }
     public void LoadCredits()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
     }
 
     public void Quit()
