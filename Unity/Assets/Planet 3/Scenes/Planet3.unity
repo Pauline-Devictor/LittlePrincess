@@ -3672,7 +3672,6 @@ GameObject:
   - component: {fileID: 441162611}
   - component: {fileID: 441162613}
   - component: {fileID: 441162612}
-  - component: {fileID: 441162614}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -3741,21 +3740,6 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 0
---- !u!114 &441162614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441162610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3cc6677194e404f9656a4cd00c3ca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  orientation: {fileID: 0}
-  rb: {fileID: 0}
 --- !u!1 &443958916
 GameObject:
   m_ObjectHideFlags: 0
@@ -7805,7 +7789,9 @@ GameObject:
   m_Component:
   - component: {fileID: 802396231}
   - component: {fileID: 802396232}
-  - component: {fileID: 802396233}
+  - component: {fileID: 802396235}
+  - component: {fileID: 802396234}
+  - component: {fileID: 802396236}
   m_Layer: 0
   m_Name: Unity-Chan
   m_TagString: Untagged
@@ -7846,7 +7832,41 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &802396233
+--- !u!136 &802396234
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802396230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &802396235
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802396230}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &802396236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
