@@ -20,11 +20,15 @@ public class MenuController : MonoBehaviour
             {
                 menuPanel.SetActive(true);
                 Time.timeScale = 0;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
             {
                 menuPanel.SetActive(false);
                 Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
     }
