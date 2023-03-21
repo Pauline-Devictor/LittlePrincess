@@ -7865,10 +7865,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.15475273
+  m_Height: 1.0234319
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.010076642, y: 0.15958303, z: -0.031162262}
 --- !u!95 &802396235
 Animator:
   serializedVersion: 4
@@ -19679,6 +19679,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802396231}
     m_Modifications:
+    - target: {fileID: -3521212144732176796, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
+      propertyPath: m_Height
+      value: 1.0820353
+      objectReference: {fileID: 0}
+    - target: {fileID: -3521212144732176796, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
+      propertyPath: m_Radius
+      value: 0.2586422
+      objectReference: {fileID: 0}
+    - target: {fileID: -3521212144732176796, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
+      propertyPath: m_Center.x
+      value: -0.01736927
+      objectReference: {fileID: 0}
+    - target: {fileID: -3521212144732176796, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5322447
+      objectReference: {fileID: 0}
+    - target: {fileID: -3521212144732176796, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
+      propertyPath: m_Center.z
+      value: 0.016869545
+      objectReference: {fileID: 0}
     - target: {fileID: 5962506490016014211, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
       propertyPath: m_Controller
       value: 
