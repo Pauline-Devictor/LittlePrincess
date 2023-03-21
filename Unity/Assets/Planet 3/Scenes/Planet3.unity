@@ -2831,7 +2831,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368248327}
-  m_LocalRotation: {x: 0.2494811, y: -0.000000016662309, z: 0.0000000042926667, w: 0.9683797}
+  m_LocalRotation: {x: 0.2494811, y: 0.00000001666231, z: -0.0000000042926667, w: 0.9683797}
   m_LocalPosition: {x: 2.070001, y: 2.498789, z: 17.898584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7901,7 +7901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3cc6677194e404f9656a4cd00c3ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 180
+  maxSpeed: 220
   orientation: {fileID: 980459635}
   rb: {fileID: 802396232}
 --- !u!1001 &818758215
@@ -10698,7 +10699,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147456851}
-  m_LocalRotation: {x: 0.24948108, y: -0.000000008331152, z: 0.0000000021463327, w: 0.9683797}
+  m_LocalRotation: {x: 0.24948108, y: 0.000000008331157, z: -0.000000002146334, w: 0.9683797}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12924,7 +12925,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330103842}
-  m_LocalRotation: {x: 0.34042525, y: -0.00000002288009, z: 0.0000000082837355, w: 0.9402717}
+  m_LocalRotation: {x: 0.34042525, y: 0.000000022880096, z: -0.000000008283737, w: 0.9402717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18750,7 +18751,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914165264}
-  m_LocalRotation: {x: 0.26116976, y: 0.0000000309132, z: -0.000000008363879, w: 0.9652929}
+  m_LocalRotation: {x: 0.2611698, y: -0.0000000113150165, z: 0.000000003061392, w: 0.9652929}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
