@@ -5,6 +5,9 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadMenu()
     {
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
     public void PlayPlanet1()

@@ -6,7 +6,6 @@ public class MenuController : MonoBehaviour
 {
     public GameObject menuPanel;
     public Button resumeButton;
-    public Button quitButton;
 
     private bool _isMenuActive = false;
 
@@ -36,7 +35,6 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         resumeButton.onClick.AddListener(ResumeGame);
-        quitButton.onClick.AddListener(GoBackToMenu);
     }
 
     void ResumeGame()
@@ -44,10 +42,5 @@ public class MenuController : MonoBehaviour
         _isMenuActive = false;
         menuPanel.SetActive(false);
         Time.timeScale = 1;
-    }
-
-    void GoBackToMenu()
-    {
-        SceneManager.LoadScene(0);
     }
 }
