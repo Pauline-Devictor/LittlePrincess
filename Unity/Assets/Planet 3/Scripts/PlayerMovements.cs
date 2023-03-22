@@ -14,6 +14,10 @@ public class PlayerMovements : MonoBehaviour
     private Vector3 _moveDirection;
     public Rigidbody rb;
 
+    private float _gravity = -9.81f;
+    [SerializeField] private float gravityMultiplier = 3.0f;
+    private float _velocity;
+
 
     private void Start()
     {
@@ -23,6 +27,7 @@ public class PlayerMovements : MonoBehaviour
     private void Update()
     {
         MyInput();
+        ApplyGravity();
     }
 
     private void FixedUpdate()
@@ -32,13 +37,15 @@ public class PlayerMovements : MonoBehaviour
 
     private void MyInput()
     {
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
+       // _horizontalInput = Input.GetAxis("Horizontal");
+       _horizontalInput = Input.GetAxisRaw("Horizontal");
+        //_verticalInput = Input.GetAxis("Vertical");
+        _verticalInput = Input.GetAxisRaw("Vertical");
     }
 
     private void MovePlayer()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (_verticalInput != 0 )
         {
             _moveDirection = (orientation.forward * _verticalInput) + (orientation.right * _horizontalInput);
 
@@ -58,5 +65,11 @@ public class PlayerMovements : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+    }
+
+    private void ApplyGravity()
+    {
+        _velocity += _gravity * gravityMultiplier * Time.deltaTime;
+        _moveDirection.y = _velocity;
     }
 }
