@@ -28,6 +28,7 @@ public class PlayerMovements : MonoBehaviour
     {
         MyInput();
         ApplyGravity();
+
     }
 
     private void FixedUpdate()
@@ -45,7 +46,7 @@ public class PlayerMovements : MonoBehaviour
 
     private void MovePlayer()
     {
-        if (_verticalInput != 0 )
+        if (_verticalInput > 0 )
         {
             _moveDirection = (orientation.forward * _verticalInput) + (orientation.right * _horizontalInput);
 
