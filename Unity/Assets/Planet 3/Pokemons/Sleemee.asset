@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde989b7f90bf341a4a062cd297188b, type: 3}
+  m_Name: Sleemee
+  m_EditorClassIdentifier: 
+  name: Sleemee
+  description: 
+  pokemonModel: {fileID: 6705402075998324148, guid: d941199d4a58fcb45adc75ea8e37c42c, type: 3}
+  type1: 0
+  type2: 0
+  maxHp: 23
+  attack: 8
+  defense: 5
+  spAttack: 5
+  spDefense: 5
+  speed: 5
+  _learnableMoves:
+  - _moveBase: {fileID: 11400000, guid: 7148edecaf5cb0542b7ebd38b8417de2, type: 2}
+    level: 1
+  - _moveBase: {fileID: 11400000, guid: 7bd3c7e1dfdee1c4d8ad95e02524c5f2, type: 2}
+    level: 5
