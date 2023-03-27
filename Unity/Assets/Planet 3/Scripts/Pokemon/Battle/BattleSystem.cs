@@ -35,14 +35,12 @@ public class BattleSystem : MonoBehaviour
 
 	private void Start()
 	{
-		Debug.Log("start");
 		Planet3SceneManager.BattleStarted += newBattle;
 		newBattle();
 	}
 
 	public void newBattle()
     {
-	    Debug.Log("coucou");
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
     }
