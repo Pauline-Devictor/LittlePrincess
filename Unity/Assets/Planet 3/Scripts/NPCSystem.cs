@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NPCSystem : MonoBehaviour
@@ -11,11 +12,18 @@ public class NPCSystem : MonoBehaviour
     public bool dialogActive;
     public string[] dialog;
     private int index = 0;
+    private bool hasTalked = false;
+    private bool hasBeenDefeated = false;
+    public string b4Fightdialog;
+    public string[] afterFightdialog;
+    
+    public delegate void OnBattleRequested();
+    public static event OnBattleRequested BattleRequested;
 
     // Update is called once per frame
     void Update()
     {
-        if (player_detection && Input.GetKeyDown(KeyCode.F) && index< dialog.Length)
+        if (player_detection && Input.GetKeyDown(KeyCode.F) && index< dialog.Length && hasTalked == false)
         {
             if (dialogBox.activeInHierarchy)
             {
@@ -31,7 +39,7 @@ public class NPCSystem : MonoBehaviour
             //print("Dialogue Started");
         }
 
-        else if (player_detection && Input.GetKeyDown(KeyCode.Space) &&  dialogBox.activeInHierarchy)
+        else if (player_detection && Input.GetKeyDown(KeyCode.Space) &&  dialogBox.activeInHierarchy && hasTalked == false)
         {
             if (index < dialog.Length)
             {
@@ -40,10 +48,22 @@ public class NPCSystem : MonoBehaviour
             else
             {
                 EndDialogue();
+                hasTalked = true;
             }
+        }
+
+        if (player_detection && Input.GetKeyDown(KeyCode.F) && hasTalked && !hasBeenDefeated)
+        {
+            dialogText.text = b4Fightdialog;
+            wait();
+            RequestBattle();
         }
     }
 
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.name.Equals("Player") || other.name.Equals("Unity_Chan_humanoid"))
@@ -96,5 +116,10 @@ public class NPCSystem : MonoBehaviour
         dialogBox.SetActive(false);
         dialogText.text = string.Empty;
         index = 0;
+    }
+    
+    void RequestBattle()
+    {
+        BattleRequested?.Invoke();
     }
 }

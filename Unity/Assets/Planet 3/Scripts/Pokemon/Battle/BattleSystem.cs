@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -24,10 +26,23 @@ public class BattleSystem : MonoBehaviour
 	public BattleState state;
 
 	public Button attackButton;
+	static bool hasWon = false;
 
-	// Start is called before the first frame update
-    void Start()
+	
+	//Gestion de la fin d'un combat avec un event
+	public delegate void OnBattleFinished();
+	public static event OnBattleFinished BattleFinished;
+
+	private void Start()
+	{
+		Debug.Log("start");
+		Planet3SceneManager.BattleStarted += newBattle;
+		newBattle();
+	}
+
+	public void newBattle()
     {
+	    Debug.Log("coucou");
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
     }
@@ -44,8 +59,10 @@ public class BattleSystem : MonoBehaviour
 
 		playerHUD.SetHUD(playerUnit);
 		enemyHUD.SetHUD(enemyUnit);
+		hasWon = false;
 
 		yield return new WaitForSeconds(2f);
+		
 
 		state = BattleState.PLAYERTURN;
 		PlayerTurn();
@@ -101,10 +118,14 @@ public class BattleSystem : MonoBehaviour
 		if(state == BattleState.WON)
 		{
 			dialogueText.text = "You won the battle!";
+			hasWon = true;
 		} else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "You were defeated.";
+			hasWon = false;
 		}
+		BattleFinished?.Invoke();
+		
 	}
 
 	void PlayerTurn()
