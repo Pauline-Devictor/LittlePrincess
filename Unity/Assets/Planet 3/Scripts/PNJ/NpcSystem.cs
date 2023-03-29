@@ -17,7 +17,6 @@ public class NpcSystem : MonoBehaviour
     private bool _hasTalked = false;
     private bool _hasBeenDefeated = false;
     public bool inFight = false;
-    public string b4Fightdialog;
     
     public delegate void OnBattleRequested();
     public static event OnBattleRequested BattleRequested;
@@ -60,7 +59,6 @@ public class NpcSystem : MonoBehaviour
 
         if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _hasTalked && !_hasBeenDefeated)
         {
-            dialogText.text = b4Fightdialog;
             inFight = true;
             Wait();
             RequestBattle();
