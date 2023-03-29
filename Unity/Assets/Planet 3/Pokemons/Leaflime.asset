@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Leaflime
   m_EditorClassIdentifier: 
   name: 
-  description: 
-  pokemonModel: {fileID: 0}
+  description: Very tanky plant since the beginning of climate change
+  pokemonModel: {fileID: 6891580169314388076, guid: 66ae442726d1cf4428dacb34edd61ac4, type: 3}
   type1: 3
   type2: 7
-  maxHp: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  _learnableMoves: []
+  maxHp: 45
+  attack: 8
+  defense: 7
+  spAttack: 8
+  spDefense: 8
+  speed: 1
+  _learnableMoves:
+  - _moveBase: {fileID: 11400000, guid: 7bd3c7e1dfdee1c4d8ad95e02524c5f2, type: 2}
+    level: 0

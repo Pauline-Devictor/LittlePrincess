@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Kingee
   description: A king slime, full of himself so doesn't hit hard but high defense
-  pokemonModel: {fileID: 0}
+  pokemonModel: {fileID: 873531700701352353, guid: 28d0a30d6aed6fc4c8ca473413f70c24, type: 3}
   type1: 4
   type2: 5
-  maxHp: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  _learnableMoves: []
+  maxHp: 28
+  attack: 8
+  defense: 15
+  spAttack: 8
+  spDefense: 15
+  speed: 5
+  _learnableMoves:
+  - _moveBase: {fileID: 11400000, guid: 7148edecaf5cb0542b7ebd38b8417de2, type: 2}
+    level: 0

@@ -22,7 +22,7 @@ MonoBehaviour:
   defense: 5
   spAttack: 5
   spDefense: 5
-  speed: 5
+  speed: 7
   _learnableMoves:
   - _moveBase: {fileID: 11400000, guid: 7148edecaf5cb0542b7ebd38b8417de2, type: 2}
     level: 1

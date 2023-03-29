@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Slibi
   m_EditorClassIdentifier: 
   name: 
-  description: 
+  description: a rabbit like slime
   pokemonModel: {fileID: 2795397902362475942, guid: 72c47fdc43d84b243bdc109c284341d6, type: 3}
   type1: 10
   type2: 1
-  maxHp: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  _learnableMoves: []
+  maxHp: 34
+  attack: 9
+  defense: 9
+  spAttack: 14
+  spDefense: 9
+  speed: 10
+  _learnableMoves:
+  - _moveBase: {fileID: 11400000, guid: 7148edecaf5cb0542b7ebd38b8417de2, type: 2}
+    level: 0

@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde989b7f90bf341a4a062cd297188b, type: 3}
   m_Name: Warrime
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: Warrime
+  description: Huge Attack, very good HP but slow and low defense
   pokemonModel: {fileID: 6688149642241925542, guid: 11eed2dfd1329ab4db9e7f27b8e628b7, type: 3}
   type1: 6
   type2: 2
-  maxHp: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  _learnableMoves: []
+  maxHp: 40
+  attack: 20
+  defense: 5
+  spAttack: 5
+  spDefense: 5
+  speed: 5
+  _learnableMoves:
+  - _moveBase: {fileID: 11400000, guid: 7148edecaf5cb0542b7ebd38b8417de2, type: 2}
+    level: 0
