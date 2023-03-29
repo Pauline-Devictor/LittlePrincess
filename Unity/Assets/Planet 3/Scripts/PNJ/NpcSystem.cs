@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class NPCSystem : MonoBehaviour
+public class NpcSystem : MonoBehaviour
 {
     private bool _playerDetection = false;
     public GameObject dialogBox;

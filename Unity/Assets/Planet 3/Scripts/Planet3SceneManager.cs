@@ -13,7 +13,7 @@ public class Planet3SceneManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         BattleSystem.BattleFinished += SwitchToTown;
-        NPCSystem.BattleRequested += SwitchToBattle;
+        NpcSystem.BattleRequested += SwitchToBattle;
     }
 
     void SwitchToTown()
