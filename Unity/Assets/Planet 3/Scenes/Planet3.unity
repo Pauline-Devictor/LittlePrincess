@@ -967,6 +967,7 @@ MonoBehaviour:
   inFight: 0
   b4Fightdialog: 
   afterFightdialog: []
+  pokemon: {fileID: 11400000, guid: 767e6b3fb789e1b49a5d39c80dcba75a, type: 2}
 --- !u!1001 &63183032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7119,6 +7120,7 @@ MonoBehaviour:
   inFight: 0
   b4Fightdialog: 
   afterFightdialog: []
+  pokemon: {fileID: 0}
 --- !u!135 &629291957
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18325,6 +18327,7 @@ MonoBehaviour:
   inFight: 0
   b4Fightdialog: 
   afterFightdialog: []
+  pokemon: {fileID: 0}
 --- !u!1 &1551304796
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class BattleSystem : MonoBehaviour
 	public GameObject[] pnjList;
 	private GameObject _currentPnj;
 
-	
+
 	//Gestion de la fin d'un combat avec un event
 	public delegate void OnBattleFinished();
 	public static event OnBattleFinished BattleFinished;

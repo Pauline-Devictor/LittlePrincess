@@ -20,6 +20,8 @@ public class NPCSystem : MonoBehaviour
     
     public delegate void OnBattleRequested();
     public static event OnBattleRequested BattleRequested;
+    
+    public PokemonBase pokemon;
 
     // Update is called once per frame
     void Update()
