@@ -16536,7 +16536,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330103842}
-  m_LocalRotation: {x: 0.34042525, y: -0.00000002288009, z: 0.0000000082837355, w: 0.9402717}
+  m_LocalRotation: {x: 0.34042525, y: 0.000000022880096, z: -0.000000008283737, w: 0.9402717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24125,6 +24125,14 @@ MonoBehaviour:
   - {fileID: 56652835}
   - {fileID: 629291954}
   - {fileID: 1537886350}
+  - {fileID: 2135530928}
+  - {fileID: 1435889993}
+  pokeList:
+  - {fileID: 6241722966948454299, guid: 93d1690d4e032184fbaa2423b24d612a, type: 3}
+  - {fileID: 8756739472964790878, guid: a0016f3e605895e42aa369e57f65cf5c, type: 3}
+  - {fileID: 5638425751042730155, guid: e669b13ba71ca9d4292e758153dc625f, type: 3}
+  - {fileID: 179158066200249615, guid: e7b89882f6e6cd14f9e1cfb03686d110, type: 3}
+  - {fileID: 3953781287576128040, guid: 26b7ca6d217a5ba48b2da9871ad9109c, type: 3}
 --- !u!4 &1972191168
 Transform:
   m_ObjectHideFlags: 0

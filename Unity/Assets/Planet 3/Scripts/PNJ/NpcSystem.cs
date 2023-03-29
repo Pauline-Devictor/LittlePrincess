@@ -130,7 +130,7 @@ public class NpcSystem : MonoBehaviour
     
     void RequestBattle()
     {
+        inFight = true;
         BattleRequested?.Invoke(); 
-        inFight = false;
     }
 }

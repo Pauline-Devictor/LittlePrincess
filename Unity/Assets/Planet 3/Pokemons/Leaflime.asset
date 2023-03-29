@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde989b7f90bf341a4a062cd297188b, type: 3}
   m_Name: Leaflime
   m_EditorClassIdentifier: 
-  name: 
+  name: Leaflime
   description: Very tanky plant since the beginning of climate change
   pokemonModel: {fileID: 6891580169314388076, guid: 66ae442726d1cf4428dacb34edd61ac4, type: 3}
   type1: 3

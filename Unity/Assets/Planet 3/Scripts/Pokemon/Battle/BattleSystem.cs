@@ -29,6 +29,9 @@ public class BattleSystem : MonoBehaviour
 	
 	public GameObject[] pnjList;
 	private GameObject _currentPnj;
+	
+	public GameObject[] pokeList;
+	private GameObject _currentEnemyPoke;
 
 
 	//Gestion de la fin d'un combat avec un event
@@ -49,11 +52,30 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator SetupBattle()
 	{
-		FindPnj();
+		_currentPnj = null;
+		foreach (var pnj in pnjList)
+		{
+			if (pnj.GetComponent<NpcSystem>().inFight)
+			{
+				_currentPnj = pnj;
+			}
+		}
+		
 		GameObject playerGo = Instantiate(playerPrefab, playerBattleStation);
 		_playerUnit = playerGo.GetComponent<PokeBattle>();
 
-		GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
+
+		String enemy = _currentPnj.GetComponent<NpcSystem>().pokemon.Name;
+		foreach (var poke in pokeList)
+		{
+			if (poke.GetComponent<PokeBattle>().unitName == enemy)
+			{
+				_currentEnemyPoke = poke;
+			}
+			
+		}
+		//GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
+		GameObject enemyGo = Instantiate(_currentEnemyPoke, enemyBattleStation);
 		_enemyUnit = enemyGo.GetComponent<PokeBattle>();
 
 		dialogueText.text = "A wild " + _enemyUnit.unitName + " approaches...";
@@ -125,6 +147,9 @@ public class BattleSystem : MonoBehaviour
 			dialogueText.text = "You were defeated.";
 		//	hasWon = false;
 		}
+
+		cleanPokemonOnBattle();
+		_currentPnj.GetComponent<NpcSystem>().inFight = false;
 		BattleFinished?.Invoke();
 		
 	}
@@ -143,16 +168,26 @@ public class BattleSystem : MonoBehaviour
 		StartCoroutine(PlayerAttack());
 	}
 
-	private void FindPnj()
+	private void cleanPokemonOnBattle()
 	{
-		foreach (var pnj in pnjList)
+		for (int i = enemyBattleStation.transform.childCount - 1; i >= 0; i--)
 		{
-			if (pnj.GetComponent<NpcSystem>().inFight)
-			{
-				_currentPnj = pnj;
-			}
+			// Récupération de l'enfant à l'index i
+			GameObject child = enemyBattleStation.transform.GetChild(i).gameObject;
+
+			// Suppression de l'enfant
+			Destroy(child);
+		}
+		
+		for (int i = playerBattleStation.transform.childCount - 1; i >= 0; i--)
+		{
+			// Récupération de l'enfant à l'index i
+			GameObject child = playerBattleStation.transform.GetChild(i).gameObject;
+
+			// Suppression de l'enfant
+			Destroy(child);
 		}
 
-		_currentPnj = null;
 	}
+	
 }
