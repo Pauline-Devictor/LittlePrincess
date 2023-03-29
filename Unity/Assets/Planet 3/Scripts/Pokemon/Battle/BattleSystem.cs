@@ -147,7 +147,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		foreach (var pnj in pnjList)
 		{
-			if (pnj.GetComponent<NPCSystem>().inFight)
+			if (pnj.GetComponent<NpcSystem>().inFight)
 			{
 				_currentPnj = pnj;
 			}
