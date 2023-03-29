@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,13 +18,14 @@ public class NpcSystem : MonoBehaviour
     private bool _hasBeenDefeated = false;
     public bool inFight = false;
     public string b4Fightdialog;
-    public string[] afterFightdialog;
     
     public delegate void OnBattleRequested();
     public static event OnBattleRequested BattleRequested;
     
     public PokemonBase pokemon;
-
+    public AudioSource audioSource;
+    public AudioClip[] audioClips;
+    
     // Update is called once per frame
     void Update()
     {
@@ -111,6 +114,11 @@ public class NpcSystem : MonoBehaviour
        if (_index < dialog.Length)
        {
            dialogText.text = dialog[_index];
+           if (_index < audioClips.Length)
+           {
+               audioSource.clip = audioClips[_index];
+               audioSource.Play();
+           }
            _index++;
        }
     }
