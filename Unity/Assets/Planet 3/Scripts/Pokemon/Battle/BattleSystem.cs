@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { Start, Playerturn, Enemyturn, Won, Lost }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -15,8 +14,8 @@ public class BattleSystem : MonoBehaviour
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
 
-	PokeBattle playerUnit;
-	PokeBattle enemyUnit;
+	PokeBattle _playerUnit;
+	PokeBattle _enemyUnit;
 
 	public Text dialogueText;
 
@@ -26,7 +25,10 @@ public class BattleSystem : MonoBehaviour
 	public BattleState state;
 
 	public Button attackButton;
-	static bool hasWon = false;
+	//static bool hasWon = false;
+	
+	public GameObject[] pnjList;
+	private GameObject _currentPnj;
 
 	
 	//Gestion de la fin d'un combat avec un event
@@ -35,77 +37,78 @@ public class BattleSystem : MonoBehaviour
 
 	private void Start()
 	{
-		Planet3SceneManager.BattleStarted += newBattle;
-		newBattle();
+		Planet3SceneManager.BattleStarted += NewBattle;
+		NewBattle();
 	}
 
-	public void newBattle()
+	public void NewBattle()
     {
-		state = BattleState.START;
+		state = BattleState.Start;
 		StartCoroutine(SetupBattle());
     }
 
 	IEnumerator SetupBattle()
 	{
-		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-		playerUnit = playerGO.GetComponent<PokeBattle>();
+		FindPnj();
+		GameObject playerGo = Instantiate(playerPrefab, playerBattleStation);
+		_playerUnit = playerGo.GetComponent<PokeBattle>();
 
-		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-		enemyUnit = enemyGO.GetComponent<PokeBattle>();
+		GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
+		_enemyUnit = enemyGo.GetComponent<PokeBattle>();
 
-		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
+		dialogueText.text = "A wild " + _enemyUnit.unitName + " approaches...";
 
-		playerHUD.SetHUD(playerUnit);
-		enemyHUD.SetHUD(enemyUnit);
-		hasWon = false;
+		playerHUD.SetHUD(_playerUnit);
+		enemyHUD.SetHUD(_enemyUnit);
+	//	hasWon = false;
 
 		yield return new WaitForSeconds(2f);
 		
 
-		state = BattleState.PLAYERTURN;
+		state = BattleState.Playerturn;
 		PlayerTurn();
 	}
 
 	IEnumerator PlayerAttack()
 	{
 		attackButton.interactable = false;
-		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+		bool isDead = _enemyUnit.TakeDamage(_playerUnit.damage);
 
-		enemyHUD.SetHP(enemyUnit.currentHP);
+		enemyHUD.SetHP(_enemyUnit.currentHP);
 		dialogueText.text = "The attack is successful!";
 
 		yield return new WaitForSeconds(1f);
 
 		if(isDead)
 		{
-			state = BattleState.WON;
+			state = BattleState.Won;
 			EndBattle();
 		} else
 		{
-			state = BattleState.ENEMYTURN;
+			state = BattleState.Enemyturn;
 			StartCoroutine(EnemyTurn());
 		}
 	}
 
 	IEnumerator EnemyTurn()
 	{
-		dialogueText.text = enemyUnit.unitName + " attacks!";
+		dialogueText.text = _enemyUnit.unitName + " attacks!";
 
 		yield return new WaitForSeconds(1f);
 
-		bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+		bool isDead = _playerUnit.TakeDamage(_enemyUnit.damage);
 
-		playerHUD.SetHP(playerUnit.currentHP);
+		playerHUD.SetHP(_playerUnit.currentHP);
 
 		yield return new WaitForSeconds(1f);
 
 		if(isDead)
 		{
-			state = BattleState.LOST;
+			state = BattleState.Lost;
 			EndBattle();
 		} else
 		{
-			state = BattleState.PLAYERTURN;
+			state = BattleState.Playerturn;
 			PlayerTurn();
 		}
 
@@ -113,14 +116,14 @@ public class BattleSystem : MonoBehaviour
 
 	void EndBattle()
 	{
-		if(state == BattleState.WON)
+		if(state == BattleState.Won)
 		{
 			dialogueText.text = "You won the battle!";
-			hasWon = true;
-		} else if (state == BattleState.LOST)
+		//	hasWon = true;
+		} else if (state == BattleState.Lost)
 		{
 			dialogueText.text = "You were defeated.";
-			hasWon = false;
+		//	hasWon = false;
 		}
 		BattleFinished?.Invoke();
 		
@@ -134,9 +137,22 @@ public class BattleSystem : MonoBehaviour
 
 	public void OnAttackButton()
 	{
-		if (state != BattleState.PLAYERTURN)
+		if (state != BattleState.Playerturn)
 			return;
 		
 		StartCoroutine(PlayerAttack());
+	}
+
+	private void FindPnj()
+	{
+		foreach (var pnj in pnjList)
+		{
+			if (pnj.GetComponent<NPCSystem>().inFight)
+			{
+				_currentPnj = pnj;
+			}
+		}
+
+		_currentPnj = null;
 	}
 }

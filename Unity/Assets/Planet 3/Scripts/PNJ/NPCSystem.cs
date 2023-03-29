@@ -6,14 +6,15 @@ using UnityEngine.UI;
 
 public class NPCSystem : MonoBehaviour
 {
-    private bool player_detection = false;
+    private bool _playerDetection = false;
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
     public bool dialogActive;
     public string[] dialog;
-    private int index = 0;
-    private bool hasTalked = false;
-    private bool hasBeenDefeated = false;
+    private int _index = 0;
+    private bool _hasTalked = false;
+    private bool _hasBeenDefeated = false;
+    public bool inFight = false;
     public string b4Fightdialog;
     public string[] afterFightdialog;
     
@@ -23,7 +24,7 @@ public class NPCSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player_detection && Input.GetKeyDown(KeyCode.F) && index< dialog.Length && hasTalked == false)
+        if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _index< dialog.Length && _hasTalked == false)
         {
             if (dialogBox.activeInHierarchy)
             {
@@ -39,28 +40,29 @@ public class NPCSystem : MonoBehaviour
             //print("Dialogue Started");
         }
 
-        else if (player_detection && Input.GetKeyDown(KeyCode.Space) &&  dialogBox.activeInHierarchy && hasTalked == false)
+        else if (_playerDetection && Input.GetKeyDown(KeyCode.Space) &&  dialogBox.activeInHierarchy && _hasTalked == false)
         {
-            if (index < dialog.Length)
+            if (_index < dialog.Length)
             {
                 NextLine();
             }
             else
             {
                 EndDialogue();
-                hasTalked = true;
+                _hasTalked = true;
             }
         }
 
-        if (player_detection && Input.GetKeyDown(KeyCode.F) && hasTalked && !hasBeenDefeated)
+        if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _hasTalked && !_hasBeenDefeated)
         {
             dialogText.text = b4Fightdialog;
-            wait();
+            inFight = true;
+            Wait();
             RequestBattle();
         }
     }
 
-    private IEnumerator wait()
+    private IEnumerator Wait()
     {
         yield return new WaitForSeconds(3);
     }
@@ -68,13 +70,13 @@ public class NPCSystem : MonoBehaviour
     {
         if (other.name.Equals("Player") || other.name.Equals("Unity_Chan_humanoid"))
         {
-            player_detection = true;
+            _playerDetection = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        player_detection = false;
+        _playerDetection = false;
         dialogBox.SetActive(false);
     }
     
@@ -104,10 +106,10 @@ public class NPCSystem : MonoBehaviour
     {
         //print(dialog.Length);
         //print(index);
-       if (index < dialog.Length)
+       if (_index < dialog.Length)
        {
-           dialogText.text = dialog[index];
-           index++;
+           dialogText.text = dialog[_index];
+           _index++;
        }
     }
 
@@ -115,11 +117,12 @@ public class NPCSystem : MonoBehaviour
     {
         dialogBox.SetActive(false);
         dialogText.text = string.Empty;
-        index = 0;
+        _index = 0;
     }
     
     void RequestBattle()
     {
-        BattleRequested?.Invoke();
+        BattleRequested?.Invoke(); 
+        inFight = false;
     }
 }
