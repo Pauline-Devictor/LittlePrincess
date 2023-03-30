@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum BattleState { Start, Playerturn, Enemyturn, Won, Lost }
@@ -28,7 +29,7 @@ public class BattleSystem : MonoBehaviour
 	//static bool hasWon = false;
 	
 	public GameObject[] pnjList;
-	private GameObject _currentPnj;
+	[FormerlySerializedAs("_currentPnj")] public GameObject currentPnj;
 	
 	public GameObject[] pokeList;
 	private GameObject _currentEnemyPoke;
@@ -37,6 +38,9 @@ public class BattleSystem : MonoBehaviour
 	//Gestion de la fin d'un combat avec un event
 	public delegate void OnBattleFinished();
 	public static event OnBattleFinished BattleFinished;
+	
+	public delegate void HasBeenDefeated();
+	public static event HasBeenDefeated IsDefeated;
 
 	private void Start()
 	{
@@ -52,12 +56,12 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator SetupBattle()
 	{
-		_currentPnj = null;
+		currentPnj = null;
 		foreach (var pnj in pnjList)
 		{
 			if (pnj.GetComponent<NpcSystem>().inFight)
 			{
-				_currentPnj = pnj;
+				currentPnj = pnj;
 			}
 		}
 		
@@ -65,7 +69,7 @@ public class BattleSystem : MonoBehaviour
 		_playerUnit = playerGo.GetComponent<PokeBattle>();
 
 
-		String enemy = _currentPnj.GetComponent<NpcSystem>().pokemon.Name;
+		String enemy = currentPnj.GetComponent<NpcSystem>().pokemon.Name;
 		foreach (var poke in pokeList)
 		{
 			if (poke.GetComponent<PokeBattle>().unitName == enemy)
@@ -138,20 +142,23 @@ public class BattleSystem : MonoBehaviour
 
 	void EndBattle()
 	{
+		cleanPokemonOnBattle();
+		currentPnj.GetComponent<NpcSystem>().inFight = false;
 		if(state == BattleState.Won)
 		{
 			dialogueText.text = "You won the battle!";
-		//	hasWon = true;
+			IsDefeated?.Invoke();
+			//	hasWon = true;
 		} else if (state == BattleState.Lost)
 		{
 			dialogueText.text = "You were defeated.";
+			BattleFinished?.Invoke();
 		//	hasWon = false;
 		}
 
 		cleanPokemonOnBattle();
-		_currentPnj.GetComponent<NpcSystem>().inFight = false;
-		BattleFinished?.Invoke();
-		
+		currentPnj.GetComponent<NpcSystem>().inFight = false;
+
 	}
 
 	void PlayerTurn()

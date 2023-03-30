@@ -133,4 +133,14 @@ public class NpcSystem : MonoBehaviour
         inFight = true;
         BattleRequested?.Invoke(); 
     }
+
+    public bool GetHasBeenDefeated()
+    {
+        return _hasBeenDefeated;
+    }
+
+    public void SetHasBeenDefeated()
+    {
+        _hasBeenDefeated = true;
+    }
 }
