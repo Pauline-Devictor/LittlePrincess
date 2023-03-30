@@ -1,7 +1,6 @@
-using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProgessionManager : MonoBehaviour
 {
@@ -15,9 +14,6 @@ public class ProgessionManager : MonoBehaviour
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
     
-    public delegate void NeedToCheckRocket();
-
-    public static event NeedToCheckRocket checkRocket;
 
     private void Start()
     {
@@ -34,7 +30,7 @@ public class ProgessionManager : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && _index == dialog.Length && _dialogueStart)
         {
-            checkRocket?.Invoke();
+            SceneManager.LoadScene(5);
         }
     }
 

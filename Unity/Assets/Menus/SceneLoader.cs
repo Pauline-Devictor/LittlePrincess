@@ -35,4 +35,9 @@ public class SceneLoader : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+    public void LoadEndScene()
+    {
+        SceneManager.LoadScene(5);
+    }
 }
