@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Menus/Credits/Credits.unity
     guid: 70ba7f1520447f040afde0b237220c85
   - enabled: 1
-    path: Assets/Planet 3/Scenes/EndScene.unity
+    path: Assets/EndScene/EndScene.unity
     guid: 60e93fbd5878eb144a2788a7c36a5c30
   m_configObjects: {}
