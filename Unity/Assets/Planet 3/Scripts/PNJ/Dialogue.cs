@@ -4,7 +4,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
@@ -63,4 +63,4 @@ public class Dialogue : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-}
+}*/
