@@ -249,7 +249,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Developpers \n\n\n\nTeacher\n\nAssets used "
+  m_text: "Developpers \n\n\n\nTeacher\n\n\n2D and 3D Models used\n\nAtom Rocket
+    Model\n2D Neighborhood\nCustomize Girl_ Type3_NO\nHaon SD series Bundle\nKawaii
+    Slimes\nCharacter Pack: Free Sample\nLow Poly Brick Houses\nPlanet Earth Free\nStylized
+    Planet-Pack Full\nSkybox Series Free"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -312,7 +315,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.1243286, w: -413.33725}
+  m_margin: {x: -174.44562, y: 0, z: 1.1243286, w: -413.33725}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -705,18 +708,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'BAILET Ludovic
-
-    DEVICTOR Pauline
-
-    LATAPIE Florian
-
-
-    WU Hui-Yin
-
-
-    Add
-    links here <3'
+  m_text: "BAILET Ludovic\nDEVICTOR Pauline\nLATAPIE Florian\n\nWU Hui-Yin\n\n\n\n\nAxinova
+    \nAfnan Mahin\nBlue Goblin Store\nHaon\nAwaii Studio\nSupercyan\nBroken Vector\nheadwards\nOne
+    Potato Kingdom Studio\nAvionx\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -779,7 +773,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.1243286, w: -413.33725}
+  m_margin: {x: 0, y: 0, z: -375.6413, w: -413.33725}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
