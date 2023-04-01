@@ -1,16 +1,24 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndSceneDialogue : MonoBehaviour
 {
+    public GameObject town; 
+    public GameObject theEnd;
+    
     public String[] dialog;
 
     public String[] speaker;
     
     public TextMeshProUGUI dialogText;
     public TextMeshProUGUI nameText;
+    
+    
+
+    
 
     private int _index = 0;
 
@@ -30,7 +38,7 @@ public class EndSceneDialogue : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.F) ||Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) && _index >= dialog.Length)
         {
-            LaunchCredit();
+            EndScreen();
         }
     }
     
@@ -45,9 +53,10 @@ public class EndSceneDialogue : MonoBehaviour
             _index++;
         }
     }
-
-    void LaunchCredit()
+    
+    void EndScreen()
     {
-        SceneManager.LoadScene(4);
+        town.SetActive(false);
+        theEnd.SetActive(true);
     }
 }
