@@ -26,6 +26,7 @@ public class EndSceneDialogue : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        NextLine();
     }
 
     // Update is called once per frame
