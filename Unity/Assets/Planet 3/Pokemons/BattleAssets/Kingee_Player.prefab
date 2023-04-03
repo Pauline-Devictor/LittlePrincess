@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7083584447695398974}
   - component: {fileID: 8684853485400710117}
+  - component: {fileID: -4958563516769886414}
   m_Layer: 0
   m_Name: Kingee_Player
   m_TagString: Untagged
@@ -211,6 +212,26 @@ MonoBehaviour:
   damage: 12
   maxHP: 100
   currentHP: 100
+--- !u!95 &-4958563516769886414
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3643718588671560439}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: eb340672e17c0af4089e561b61cdc548, type: 3}
+  m_Controller: {fileID: 9100000, guid: 707b944f06051734793367fc0c69bc07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4501148143926917187
 GameObject:
   m_ObjectHideFlags: 0

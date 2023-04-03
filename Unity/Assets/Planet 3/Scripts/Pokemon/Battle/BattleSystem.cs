@@ -41,6 +41,7 @@ public class BattleSystem : MonoBehaviour
 	
 	public delegate void HasBeenDefeated();
 	public static event HasBeenDefeated IsDefeated;
+	
 
 	private void Start()
 	{
@@ -81,6 +82,9 @@ public class BattleSystem : MonoBehaviour
 		//GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
 		GameObject enemyGo = Instantiate(_currentEnemyPoke, enemyBattleStation);
 		_enemyUnit = enemyGo.GetComponent<PokeBattle>();
+		//Idle
+		//_currentEnemyPoke.GetComponent<Animator>().Play("Idle");
+		//_currentEnemyPoke.GetComponent<Animator>().SetBool("Attack",true);
 
 		dialogueText.text = "A wild " + _enemyUnit.unitName + " approaches...";
 
@@ -196,5 +200,5 @@ public class BattleSystem : MonoBehaviour
 		}
 
 	}
-	
+
 }

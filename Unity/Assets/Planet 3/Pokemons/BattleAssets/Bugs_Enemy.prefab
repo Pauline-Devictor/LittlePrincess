@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2795397902362475942, guid: 72c47fdc43d84b243bdc109c284341d6, type: 3}
       propertyPath: m_Name
-      value: Slime_02
+      value: Bugs_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3278883554580211484, guid: 72c47fdc43d84b243bdc109c284341d6, type: 3}
       propertyPath: m_RootOrder
@@ -74,6 +74,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2795397902362475942, guid: 72c47fdc43d84b243bdc109c284341d6, type: 3}
   m_PrefabInstance: {fileID: 6867162269031782392}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &8491151247394065090
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756739472964790878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: eb340672e17c0af4089e561b61cdc548, type: 3}
+  m_Controller: {fileID: 9100000, guid: 707b944f06051734793367fc0c69bc07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2300362691495252078
 MonoBehaviour:
   m_ObjectHideFlags: 0

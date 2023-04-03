@@ -2843,11 +2843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dae76e2b495604f804755021013872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 8159456}
-  lines:
-  - Salut
-  - Je suis du texte
-  textSpeed: 2
 --- !u!1 &223931717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3860,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368248327}
-  m_LocalRotation: {x: 0.2494811, y: 0.00000001666231, z: -0.0000000042926667, w: 0.9683797}
+  m_LocalRotation: {x: 0.2494811, y: -0.000000016662309, z: 0.0000000042926667, w: 0.9683797}
   m_LocalPosition: {x: 0.55468535, y: 1.5812956, z: 1.072813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13815,7 +13810,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147456851}
-  m_LocalRotation: {x: 0.24948108, y: 0.000000008331157, z: -0.000000002146334, w: 0.9683797}
+  m_LocalRotation: {x: 0.24948108, y: -0.000000008331152, z: 0.0000000021463327, w: 0.9683797}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097620406807382713}
   - component: {fileID: 7180732613856886124}
+  - component: {fileID: 5816479314033598250}
   m_Layer: 0
   m_Name: Sleemee_Enemy
   m_TagString: Untagged
@@ -179,6 +180,26 @@ MonoBehaviour:
   damage: 8
   maxHP: 23
   currentHP: 23
+--- !u!95 &5816479314033598250
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6241722966948454299}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: eb340672e17c0af4089e561b61cdc548, type: 3}
+  m_Controller: {fileID: 9100000, guid: 707b944f06051734793367fc0c69bc07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6607005859386684641
 GameObject:
   m_ObjectHideFlags: 0
