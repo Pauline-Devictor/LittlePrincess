@@ -46,11 +46,10 @@ public class ProgessionManager : MonoBehaviour
             }
         }
 
-        if (_battleCounter == /*npcSystems.Length*/ 1)
+        if (_battleCounter == npcSystems.Length)
         { 
            
             _endGameStart = true;
-            Debug.Log(_endGameStart);
             EndGameStart();
             
         }
