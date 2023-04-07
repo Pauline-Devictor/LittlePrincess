@@ -20,7 +20,7 @@ public class TriggerIndoorToOutdoor : MonoBehaviour
 
            exitMuseum?.Invoke();
            
-           gameObject.transform.position = new Vector3(0, 0, 0);
+           gameObject.transform.localPosition = new Vector3(0, 0, 0);
            gameObject.transform.Rotate(0, 180, 0);
 
         }
