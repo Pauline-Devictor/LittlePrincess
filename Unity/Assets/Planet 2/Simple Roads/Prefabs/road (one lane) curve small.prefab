@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9017587709179879715}
   - component: {fileID: 5889167394121623986}
   - component: {fileID: 8642816033932253128}
+  - component: {fileID: 2722389874990034431}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2722389874990034431
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455319497110023361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8634060567236447461, guid: 35f824907a3aa5149951f57c17d23e83, type: 3}
 --- !u!1 &3463340205550070275
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +145,7 @@ GameObject:
   - component: {fileID: 3590998939931697426}
   - component: {fileID: 3590063994886565317}
   - component: {fileID: 6459900956766004968}
+  - component: {fileID: 3560190276877008798}
   m_Layer: 0
   m_Name: Guard_2
   m_TagString: Untagged
@@ -202,6 +218,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3560190276877008798
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796728899965658746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8874959772301095884, guid: 35f824907a3aa5149951f57c17d23e83, type: 3}
 --- !u!1 &6320500177882478017
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +243,7 @@ GameObject:
   - component: {fileID: 5450296579804194887}
   - component: {fileID: 5156019156132225103}
   - component: {fileID: 8953676125907001341}
+  - component: {fileID: 9192088287087874681}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -285,6 +316,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9192088287087874681
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320500177882478017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7945707344175244067, guid: 35f824907a3aa5149951f57c17d23e83, type: 3}
 --- !u!1 &6359593880069554358
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +341,7 @@ GameObject:
   - component: {fileID: 5556476150465914012}
   - component: {fileID: 6818471167160896160}
   - component: {fileID: 5811541779060973314}
+  - component: {fileID: 6988537890045540699}
   m_Layer: 0
   m_Name: Sidewalk_2
   m_TagString: Untagged
@@ -368,6 +414,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6988537890045540699
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359593880069554358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 27223526886310035, guid: 35f824907a3aa5149951f57c17d23e83, type: 3}
 --- !u!1 &8950333015499500990
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +439,7 @@ GameObject:
   - component: {fileID: 467358448150749821}
   - component: {fileID: 6564442665224023096}
   - component: {fileID: 6562964261072772345}
+  - component: {fileID: 2153876225581765198}
   m_Layer: 0
   m_Name: Sidewalk
   m_TagString: Untagged
@@ -451,3 +512,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2153876225581765198
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950333015499500990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4535594853785956779, guid: 35f824907a3aa5149951f57c17d23e83, type: 3}
