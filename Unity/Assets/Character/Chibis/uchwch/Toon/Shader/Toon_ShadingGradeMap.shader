@@ -175,6 +175,7 @@ Shader "UnityChanToonShader/Toon_ShadingGradeMap" {
             #pragma multi_compile _OUTLINE_NML _OUTLINE_POS
             //アウトライン処理は以下のUCTS_Outline.cgincへ.
             #include "Assets/Character/Chibis/SD Unity-Chan Haon Custom/Shader/Unity-chan Toon Shader Ver 2.0.6/UCTS_Outline2.cginc"
+          //  #include  "Assets/Character/Chibis/"
             ENDCG
         }
 //ToonCoreStart
