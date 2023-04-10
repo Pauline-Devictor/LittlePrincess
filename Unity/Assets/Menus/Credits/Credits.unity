@@ -252,7 +252,9 @@ MonoBehaviour:
   m_text: "Developpers \n\n\n\nTeacher\n\n\n2D and 3D Models used\n\nAtom Rocket
     Model\n2D Neighborhood\nCustomize Girl_ Type3_NO\nHaon SD series Bundle\nKawaii
     Slimes\nCharacter Pack: Free Sample\nLow Poly Brick Houses\nPlanet Earth Free\nStylized
-    Planet-Pack Full\nSkybox Series Free"
+    Planet-Pack Full\nSkybox Series Free\nHand Painted Sand Textures\nSimple Roads\nMetal
+    and Concrete Barriers\nCartoon Car - Vehicle Pack\nRacing Car set\n\nMusics\nAbsolutely
+    Free Music\nSeamless Loop and Short Music\nFree Music and Tracks For Games"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -315,7 +317,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -174.44562, y: 0, z: 1.1243286, w: -413.33725}
+  m_margin: {x: -232.11139, y: 0, z: 1.1243286, w: -413.33725}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -710,7 +712,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "BAILET Ludovic\nDEVICTOR Pauline\nLATAPIE Florian\n\nWU Hui-Yin\n\n\n\n\nAxinova
     \nAfnan Mahin\nBlue Goblin Store\nHaon\nAwaii Studio\nSupercyan\nBroken Vector\nheadwards\nOne
-    Potato Kingdom Studio\nAvionx\n"
+    Potato Kingdom Studio\nAvionx\nLowlyPoly\nStepan Drunks\nAbandoned World\nzelalkat\nSheepFactory
+    Studios\n\n\nVertex Studio\nFantom\nRizwan Ashraf"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
