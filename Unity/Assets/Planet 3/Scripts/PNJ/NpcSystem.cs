@@ -44,8 +44,14 @@ public class NpcSystem : MonoBehaviour
             
             //print("Dialogue Started");
         }
-
-        else if (_playerDetection && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) )&&  dialogBox.activeInHierarchy && _hasTalked == false)
+        else if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _hasTalked && !_hasBeenDefeated)
+        {
+            inFight = true;
+            dialogueHintButton.SetActive(false);
+            Wait();
+            RequestBattle();
+        }
+        else if (_playerDetection && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.F) )&&  dialogBox.activeInHierarchy && _hasTalked == false)
         {
             if (_index < dialog.Length)
             {
@@ -56,14 +62,6 @@ public class NpcSystem : MonoBehaviour
                 EndDialogue();
                 _hasTalked = true;
             }
-        }
-
-        if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _hasTalked && !_hasBeenDefeated)
-        {
-            inFight = true;
-            dialogueHintButton.SetActive(false);
-            Wait();
-            RequestBattle();
         }
     }
 
