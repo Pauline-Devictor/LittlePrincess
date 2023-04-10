@@ -17,6 +17,7 @@ public class NpcSystem : MonoBehaviour
     private bool _hasTalked = false;
     private bool _hasBeenDefeated = false;
     public bool inFight = false;
+    public GameObject dialogueHintButton;
     
     public delegate void OnBattleRequested();
     public static event OnBattleRequested BattleRequested;
@@ -28,23 +29,23 @@ public class NpcSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( (_playerDetection && _hasTalked == false && _index == 0) || (_playerDetection && _hasTalked && !_hasBeenDefeated))
+        {
+            dialogueHintButton.SetActive(true);
+            
+        }
         if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _index< dialog.Length && _hasTalked == false)
         {
-            if (dialogBox.activeInHierarchy)
-            {
-                dialogBox.SetActive(false);
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                dialogBox.SetActive(true);
-                NextLine();
-            }
+            dialogueHintButton.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            dialogBox.SetActive(true);
+            NextLine();
+            
             //print("Dialogue Started");
         }
 
-        else if (_playerDetection && Input.GetKeyDown(KeyCode.Space) &&  dialogBox.activeInHierarchy && _hasTalked == false)
+        else if (_playerDetection && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) )&&  dialogBox.activeInHierarchy && _hasTalked == false)
         {
             if (_index < dialog.Length)
             {
@@ -60,6 +61,7 @@ public class NpcSystem : MonoBehaviour
         if (_playerDetection && Input.GetKeyDown(KeyCode.F) && _hasTalked && !_hasBeenDefeated)
         {
             inFight = true;
+            dialogueHintButton.SetActive(false);
             Wait();
             RequestBattle();
         }
