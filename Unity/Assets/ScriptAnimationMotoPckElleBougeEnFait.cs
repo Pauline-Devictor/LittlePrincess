@@ -13,10 +13,10 @@ public class ScriptAnimationMotoPckElleBougeEnFait : MonoBehaviour
     
     private void Update()
     {
-        if (animationLancée)
+        if (animationLancée) 
         {
             // go up go down sinusoide motion 
-            transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(Time.time)/50, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - Mathf.Sin(Time.time)/50, transform.position.z);
         }
     }
 
