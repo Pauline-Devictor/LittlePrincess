@@ -40,8 +40,10 @@ public class PlayerMovements : MonoBehaviour
     {
        // _horizontalInput = Input.GetAxis("Horizontal");
        _horizontalInput = Input.GetAxisRaw("Horizontal");
+       Debug.Log("_horizontalInput" + _horizontalInput);
         //_verticalInput = Input.GetAxis("Vertical");
         _verticalInput = Input.GetAxisRaw("Vertical");
+        Debug.Log("_verticalInput" + _verticalInput);
     }
 
     private void MovePlayer()
