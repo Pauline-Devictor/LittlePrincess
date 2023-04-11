@@ -24,10 +24,5 @@ public class TriggerIndoorToOutdoor : MonoBehaviour
            gameObject.transform.Rotate(0, 180, 0);
 
         }
-        else
-        {
-            Debug.Log("Not Triggered");
-        }
     }
-    
 }
