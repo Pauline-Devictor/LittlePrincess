@@ -81,6 +81,7 @@ public class NpcSystem : MonoBehaviour
     {
         _playerDetection = false;
         dialogBox.SetActive(false);
+        dialogueHintButton.SetActive(false);
     }
     
     //------DialoguePart-----------

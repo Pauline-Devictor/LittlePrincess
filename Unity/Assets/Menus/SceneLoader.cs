@@ -40,4 +40,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+    
+    public void LoadIntro()
+    {
+        SceneManager.LoadScene(6);
+    }
 }
