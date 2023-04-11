@@ -9,6 +9,7 @@ public class HorizontalMouseLook : MonoBehaviour
     
     public float xRotation = 0f;
     
+    
     // Start is called before the first frame update
     void Start()
     {
