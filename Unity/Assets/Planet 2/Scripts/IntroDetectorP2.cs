@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class IntroDetectorP2 : MonoBehaviour
 {
@@ -34,7 +35,9 @@ public class IntroDetectorP2 : MonoBehaviour
             {
                 player.GetComponent<PlayerMovement>().enabled = false;
                 camera.GetComponent<HorizontalMouseLook>().enabled = false;
+                // wait one second before disabling player controller
                 unityChan.GetComponent<PlayerControllerPlanet3>().enabled = false;
+                unityChan.GetComponent<Animator>().enabled = false;
                 Debug.Log("------------------------ First line");
                 NextLine();
             }
@@ -50,6 +53,7 @@ public class IntroDetectorP2 : MonoBehaviour
                 player.GetComponent<PlayerMovement>().enabled = true;
                 camera.GetComponent<HorizontalMouseLook>().enabled = true;
                 unityChan.GetComponent<PlayerControllerPlanet3>().enabled = true;
+                unityChan.GetComponent<Animator>().enabled = true;
                 _hasTalked = true;
             }
             

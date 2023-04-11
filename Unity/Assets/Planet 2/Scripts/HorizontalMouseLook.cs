@@ -24,8 +24,8 @@ public class HorizontalMouseLook : MonoBehaviour
         var mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         
         // Debug.Log(mouseX + "," + mouseY);
-        // xRotation = 30f; // mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -10f, 10f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         
