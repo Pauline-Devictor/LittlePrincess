@@ -2953,7 +2953,6 @@ GameObject:
   - component: {fileID: 222739025}
   - component: {fileID: 222739027}
   - component: {fileID: 222739026}
-  - component: {fileID: 222739028}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -3020,18 +3019,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222739024}
   m_CullTransparentMesh: 1
---- !u!114 &222739028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222739024}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36dae76e2b495604f804755021013872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &223513398
 GameObject:
   m_ObjectHideFlags: 0
@@ -24302,7 +24289,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914165264}
-  m_LocalRotation: {x: 0.26116976, y: 0.0000000309132, z: -0.000000008363879, w: 0.9652929}
+  m_LocalRotation: {x: 0.2611698, y: -0.0000000113150165, z: 0.000000003061392, w: 0.9652929}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
