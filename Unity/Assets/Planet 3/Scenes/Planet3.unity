@@ -969,8 +969,11 @@ MonoBehaviour:
   pokemon: {fileID: 11400000, guid: 099854b59f59f384291712244a35e495, type: 2}
   audioSource: {fileID: 542107867}
   audioClips:
-  - {fileID: 8300000, guid: e44a3e6a889e39e4a8f4fbe0ce97ac8d, type: 3}
-  - {fileID: 8300000, guid: 24eec2a08966a3244878473ccace81fb, type: 3}
+  - {fileID: 8300000, guid: 4ce107271746f00439fde725cc1b7711, type: 3}
+  - {fileID: 8300000, guid: 285ad4caca23c864cb05bf31c7c80358, type: 3}
+  - {fileID: 8300000, guid: c6770c3f9ac7c784f8ce78e62e2659fe, type: 3}
+  - {fileID: 8300000, guid: 4c6347c319e5c2749bed6c1bf42f841d, type: 3}
+  - {fileID: 8300000, guid: 550b19286d1b5224f8f6943e34db126b, type: 3}
 --- !u!1001 &63183032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4255,7 +4258,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368248327}
-  m_LocalRotation: {x: 0.2494811, y: -0.000000016662309, z: 0.0000000042926667, w: 0.9683797}
+  m_LocalRotation: {x: 0.2494811, y: 0.00000001666231, z: -0.0000000042926667, w: 0.9683797}
   m_LocalPosition: {x: 0.55468535, y: 1.5812956, z: 1.072813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7678,7 +7681,12 @@ MonoBehaviour:
   dialogueHintButton: {fileID: 667900125}
   pokemon: {fileID: 11400000, guid: eb73a9f467885e94caaf912f6f6ec4be, type: 2}
   audioSource: {fileID: 1748049848}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: d3d8f34bbdfcba547bd3b14b658f6d9d, type: 3}
+  - {fileID: 8300000, guid: 3e7ab56c23eecd245a367875fb194651, type: 3}
+  - {fileID: 8300000, guid: c28b97f8988f3d743bd06140ea83179c, type: 3}
+  - {fileID: 8300000, guid: ceadb2707bd1d4f4aaec62b4f4ad2ba7, type: 3}
+  - {fileID: 8300000, guid: f4ca0b7b3c48150419026085abf3cb90, type: 3}
 --- !u!135 &629291957
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14495,7 +14503,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147456851}
-  m_LocalRotation: {x: 0.24948108, y: -0.000000008331152, z: 0.0000000021463327, w: 0.9683797}
+  m_LocalRotation: {x: 0.24948108, y: 0.000000008331157, z: -0.000000002146334, w: 0.9683797}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17290,7 +17298,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330103842}
-  m_LocalRotation: {x: 0.34042525, y: -0.00000002288009, z: 0.0000000082837355, w: 0.9402717}
+  m_LocalRotation: {x: 0.34042525, y: 0.000000022880096, z: -0.000000008283737, w: 0.9402717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18477,13 +18485,19 @@ MonoBehaviour:
   - Ma soeur et moi on va en cours sur Terre !
   - "Comment ??? Toi aussi tu vas aller sur Terre ? Et dans notre \xE9cole !"
   - "J'ai trop h\xE2te qu'on se retrouve l\xE0 bas ! On va trop s'amuser"
-  - C'est juste dommage qu'on puisse pas apporet nos Animons
+  - C'est juste dommage qu'on puisse pas apporter nos Animons
   - Tiens d'ailleurs tu veux faire un combat ?
   inFight: 0
   dialogueHintButton: {fileID: 667900125}
   pokemon: {fileID: 11400000, guid: 8d4bcbecdbf2c374dbe2aed09ca05c04, type: 2}
   audioSource: {fileID: 1460838264}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 8a1cfdc10417e304895f4eb40589323d, type: 3}
+  - {fileID: 8300000, guid: a8ea37d1d2985604e8646d913d961bdd, type: 3}
+  - {fileID: 8300000, guid: b7df42453bb7a7447ac8cfee8b7a7cd3, type: 3}
+  - {fileID: 8300000, guid: b1f6cd2a664a90b438d8e5aa19ded422, type: 3}
+  - {fileID: 8300000, guid: 305c0b29656b07944b4e25dfca96323a, type: 3}
+  - {fileID: 8300000, guid: b8bf311b42b6be8439864915c2a99698, type: 3}
 --- !u!135 &1435889996
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19963,7 +19977,12 @@ MonoBehaviour:
   dialogueHintButton: {fileID: 667900125}
   pokemon: {fileID: 11400000, guid: 74a22e64832f1a04784cc6bc8dc1c4c1, type: 2}
   audioSource: {fileID: 1273867462}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 3705ba1c025adbd4980438c407d85355, type: 3}
+  - {fileID: 8300000, guid: a6c7df1cb13eb5a40a43e1c5b25b288a, type: 3}
+  - {fileID: 8300000, guid: ade23fbac4d111249bcaf91399562f58, type: 3}
+  - {fileID: 8300000, guid: fd7969799766f0041b4ed9749047b76e, type: 3}
+  - {fileID: 8300000, guid: b6975289e776adc46a6f444a191ce69a, type: 3}
 --- !u!1 &1551304796
 GameObject:
   m_ObjectHideFlags: 0
@@ -24289,7 +24308,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914165264}
-  m_LocalRotation: {x: 0.2611698, y: -0.0000000113150165, z: 0.000000003061392, w: 0.9652929}
+  m_LocalRotation: {x: 0.26116976, y: 0.0000000309132, z: -0.000000008363879, w: 0.9652929}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -26607,7 +26626,11 @@ MonoBehaviour:
   dialogueHintButton: {fileID: 667900125}
   pokemon: {fileID: 11400000, guid: 767e6b3fb789e1b49a5d39c80dcba75a, type: 2}
   audioSource: {fileID: 774440040}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: da6dc1ace7792354eb6ebd1f00c9c980, type: 3}
+  - {fileID: 8300000, guid: 075e07f48720b1a419fcd7e245ace8a1, type: 3}
+  - {fileID: 8300000, guid: 1896ee91cc6fbf240a682f1ec3bce459, type: 3}
+  - {fileID: 8300000, guid: 537c6759cbb00a74b9170cd58c3ea537, type: 3}
 --- !u!135 &2135530931
 SphereCollider:
   m_ObjectHideFlags: 0
