@@ -48,6 +48,7 @@ public class NpcSystem : MonoBehaviour
         {
             inFight = true;
             dialogueHintButton.SetActive(false);
+            _hasBeenDefeated = true;
             Wait();
             RequestBattle();
         }
@@ -71,7 +72,7 @@ public class NpcSystem : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name.Equals("Player") || other.name.Equals("Unity_Chan_humanoid"))
+        if (other.name.Equals("Player") || other.name.Equals("Unity_Chan_humanoid") || other.tag.Equals("Player"))
         {
             _playerDetection = true;
         }
