@@ -16,6 +16,10 @@ public class IntroDetectorP2 : MonoBehaviour
     public GameObject player;
     public GameObject camera;
     public GameObject unityChan;
+    public GameObject NPC;
+    public GameObject dialogueBoxArrivee;
+    public GameObject dialogueBoxChoix;
+    
 
     private int _index;
     // Start is called before the first frame update
@@ -24,6 +28,7 @@ public class IntroDetectorP2 : MonoBehaviour
         _index = 0;
         _hasTalked = false;
         _detectPlayer = false;
+        dialogueBoxChoix.GetComponent<BoxCollider>().enabled = false;
     }
 
     private void Update()
@@ -33,11 +38,7 @@ public class IntroDetectorP2 : MonoBehaviour
             Debug.Log("Player detected");
             if (_index < introductionDialogue.Length && _index == 0)
             {
-                player.GetComponent<PlayerMovement>().enabled = false;
-                camera.GetComponent<HorizontalMouseLook>().enabled = false;
-                // wait one second before disabling player controller
-                unityChan.GetComponent<PlayerControllerPlanet3>().enabled = false;
-                unityChan.GetComponent<Animator>().enabled = false;
+                enabledAll(false);
                 Debug.Log("------------------------ First line");
                 NextLine();
             }
@@ -50,11 +51,13 @@ public class IntroDetectorP2 : MonoBehaviour
             {
                 Debug.Log("------------------------ End dialogue");
                 EndDialogue();
-                player.GetComponent<PlayerMovement>().enabled = true;
-                camera.GetComponent<HorizontalMouseLook>().enabled = true;
-                unityChan.GetComponent<PlayerControllerPlanet3>().enabled = true;
-                unityChan.GetComponent<Animator>().enabled = true;
+                enabledAll(true);
                 _hasTalked = true;
+                NPC.transform.position = new Vector3(-13f, 1.3f, -84f);
+                NPC.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                dialogueBoxArrivee.GetComponent<BoxCollider>().enabled = false;
+                dialogueBoxChoix.GetComponent<BoxCollider>().enabled = true;
             }
             
         }
@@ -89,5 +92,13 @@ public class IntroDetectorP2 : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
         _index = 0;
+    }
+    
+    void enabledAll(bool enabled)
+    {
+        player.GetComponent<PlayerMovement>().enabled = enabled;
+        camera.GetComponent<HorizontalMouseLook>().enabled = enabled;
+        unityChan.GetComponent<PlayerControllerPlanet3>().enabled = enabled;
+        unityChan.GetComponent<Animator>().enabled = enabled;
     }
 }
