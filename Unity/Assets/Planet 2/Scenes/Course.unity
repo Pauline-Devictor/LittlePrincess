@@ -10707,6 +10707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaulineCar
       objectReference: {fileID: 0}
+    - target: {fileID: 4503631748811674863, guid: 1edadaa298c8fbe439d5ec7ad227c0b6, type: 3}
+      propertyPath: m_TagString
+      value: IA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edadaa298c8fbe439d5ec7ad227c0b6, type: 3}
 --- !u!1 &2135294762 stripped
