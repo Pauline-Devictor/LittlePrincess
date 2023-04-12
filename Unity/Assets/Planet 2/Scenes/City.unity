@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.70705926, g: 0.40122628, b: 0.22589856, a: 1}
+  m_IndirectSpecularColor: {r: 0.70704263, g: 0.40122154, b: 0.2258979, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,27 +177,27 @@ MonoBehaviour:
   - .
   - ..
   - Ce que nous sommes ?
-  - "Nous sommes une esp\xE8re de parasite."
+  - "Nous sommes une esp\xE8ce de parasite."
   - .
-  - "N'ai pas peur, pour survivre nous n'avons pas besoin d'\xEAtre vivant mais d'objets
-    m\xE9chaniques."
-  - "Nous sommes arriv\xE9 sur cette plan\xE8te il y a quelques ann\xE9es d\xE9j\xE0."
-  - "Cette ville a l'abandon \xE0 \xE9t\xE9 comme un refuge pour nous et nous avons
+  - "N'ai pas peur, pour survivre nous n'avons pas besoin d'\xEAtres vivants mais
+    d'objets m\xE9chaniques."
+  - "Nous sommes arriv\xE9s sur cette plan\xE8te il y a quelques ann\xE9es d\xE9j\xE0."
+  - "Cette ville \xE0 l'abandon a \xE9t\xE9 comme un refuge pour nous et nous avons
     pu survivre et nous habituer \xE0 cette plan\xE8te."
   - .
-  - "Bref, revenons \xE0 nos tondeuse."
+  - "Bref, revenons \xE0 nos tondeuses."
   - Du carburant, du carburant, du carburant .....
   - "Il me semble que les anciens habitants avaient laiss\xE9 quelque chose dans
-    la genre. Laissez moi chercher."
+    le genre. Laissez moi chercher."
   - .
   - ..
   - "Ah, le voil\xE0."
   - "Hop l\xE0, pas si vite. J'esp\xE8re que vous aimez jouer car ce carburant : "
   - Vous allez devoir le gagner !!!
-  - "Vous voyez les trois voitures \xE0 c\xF4t\xE9 de moi ? Elle sont encore fonctionnelle."
-  - "Choisissez en une et pr\xE9parez vous a faire une course."
-  - Si vous gagnez cette course, nous vous laisseront prendre ce carburant.
-  - Nous ne sommes pas cruelle, nous vous laisseront autant d'essaie que vous voulez.
+  - "Vous voyez les trois voitures \xE0 c\xF4t\xE9 de moi ? Elles sont encore fonctionnelles."
+  - "Choisissez en une et pr\xE9parez vous \xE0 faire une course."
+  - Si vous gagnez cette course, nous vous laisserons prendre ce carburant.
+  - Nous ne sommes pas cruels, nous vous laisserons autant d'essais que vous voulez.
   - Je vous souhaite bonne chance.
   player: {fileID: 1312437724}
   camera: {fileID: 1583601119}
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   dialogText: {fileID: 1269601296}
   dialogActive: 0
   dialog:
-  - Le grnad cone orange et blanc ?
+  - Le grand cone orange et blanc ?
   - "Vous \xEAtes aveugle ou quoi ? C'est le c\xF4ne d'\xE0 c\xF4t\xE9."
   inFight: 0
   dialogueHintButton: {fileID: 926039612}
@@ -4953,7 +4953,7 @@ MonoBehaviour:
   dialogText: {fileID: 1269601296}
   dialogActive: 0
   dialog:
-  - "L'autre jour je me baladais et je suis tomber sur un batiment \xE9trange."
+  - "L'autre jour je me baladais et je suis tomb\xE9 sur un batiment \xE9trange."
   - 'Il y avait un grand panneau avec 4 lettres dessus : IKEA'
   - Ca te dit quelque chose ?
   inFight: 0
@@ -5395,7 +5395,7 @@ MonoBehaviour:
   - Hummmmm ...
   - "Je peux peut \xEAtre vous aider."
   - "Rejoignez moi \xE0 la mairie, c'est le grand c\xF4ne orange et blanc. Vous ne
-    pourrez pas la louper."
+    pourrez pas le louper."
   player: {fileID: 1312437724}
   camera: {fileID: 1583601119}
   unityChan: {fileID: 561139845}
@@ -6212,10 +6212,10 @@ MonoBehaviour:
   dialogText: {fileID: 1269601296}
   dialogActive: 0
   dialog:
-  - "J'en ai mar de march\xE9 toute la journ\xE9e."
+  - "J'en ai marre de marcher toute la journ\xE9e."
   - Ah mais non j'oubliais, je roule.
   - ...
-  - "J'en ai mare de rouler toute la journ\xE9e."
+  - "J'en ai marre de rouler toute la journ\xE9e."
   inFight: 0
   dialogueHintButton: {fileID: 926039612}
   pokemon: {fileID: 0}
