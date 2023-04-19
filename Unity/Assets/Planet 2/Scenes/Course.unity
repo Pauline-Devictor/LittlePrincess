@@ -7387,9 +7387,6 @@ MonoBehaviour:
   - {fileID: 340129357}
   totalLaps: 3
   ui: {fileID: 374507748}
-  onPlayerFinished:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1240809640
 GameObject:
   m_ObjectHideFlags: 0
@@ -9978,7 +9975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rg: {fileID: 1860494507}
-  forwardMoveSpeed: 100
+  forwardMoveSpeed: 90
   backwardMoveSpeed: -50
   steerSpeed: 250
 --- !u!114 &1860494505
@@ -10736,7 +10733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rg: {fileID: 2135294763}
-  forwardMoveSpeed: 100
+  forwardMoveSpeed: 90
   backwardMoveSpeed: -50
   steerSpeed: 250
 --- !u!114 &2135294765

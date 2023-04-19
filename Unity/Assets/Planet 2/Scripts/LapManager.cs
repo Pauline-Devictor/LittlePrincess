@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class LapManager : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class LapManager : MonoBehaviour
 
     private List<PlayerRank> playerRanks = new List<PlayerRank>();
     private PlayerRank mainPlayerRank;
-    public UnityEvent onPlayerFinished = new UnityEvent();
 
     void Start()
     {
@@ -60,19 +60,18 @@ public class LapManager : MonoBehaviour
                     player.rank = playerRanks.FindAll(player => player.hasFinished).Count;
 
                     // if first winner, display its name
-                    if (player.rank == 1)
+                    if (car.gameObject.tag == "Player" && player.rank == 1)
                     {
 
                         // TODO : create attribute divername in CarIdentity 
-                        //Debug.Log(player.identity.driverName + " won");
-                        //ui.UpdateLapText(player.identity.driverName + " won");
+                        Debug.Log(" won");
+                        //ui.UpdateLapText(player.identity. + " won");
+						SceneManager.LoadScene(9);
                     }
-                    else if (player == mainPlayerRank) // display player rank if not winner
+                    else if (car.gameObject.tag == "Player") // display player rank if not winner
                     {
-                        ui.UpdateLapText("\nYou finished in " + mainPlayerRank.rank + " place");
+						SceneManager.LoadScene(8);
                     }
-
-                    if (player == mainPlayerRank) onPlayerFinished.Invoke();
                 }
                 else {
                     // TODO : create attribute divername in CarIdentity 

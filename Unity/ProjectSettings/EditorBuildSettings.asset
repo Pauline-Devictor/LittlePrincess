@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Planet 2/Scenes/Course.unity
     guid: 06620a856e7664bca9e71b4c2949d99a
+  - enabled: 1
+    path: Assets/Planet 2/Scenes/City Lose.unity
+    guid: 8f16f6eef542f49bd8fa50ed32738870
+  - enabled: 1
+    path: Assets/Planet 2/Scenes/City Win.unity
+    guid: 561bca305af4346ba9b9c3dd6fafaa9a
   m_configObjects: {}

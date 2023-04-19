@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LoadRace : MonoBehaviour
 {
+    public int sceneIndex;
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision detected");
         Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
