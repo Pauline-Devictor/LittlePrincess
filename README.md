@@ -4,7 +4,7 @@ How to configure when charging the unity package :
 First : add scenes in build setting in the following order (all scenes are in Assets/Scenes):
 1. MainMenu 
 2. Planet1
-3. Planet2
+3. City
 4. Planet3
 5. Credits
 6. EndScene
