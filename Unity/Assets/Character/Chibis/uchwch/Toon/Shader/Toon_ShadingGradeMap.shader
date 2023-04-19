@@ -261,7 +261,7 @@ Shader "UnityChanToonShader/Toon_ShadingGradeMap" {
             #pragma target 3.0
             //v.2.0.4
             #pragma multi_compile _IS_CLIPPING_OFF
-            #include "Assets/Character/Chibis/uchwch/Toon/Shader/UCTS_ShadowCaster.cginc"
+           // #include "Assets/Character/Chibis/uchwch/Toon/Shader/UCTS_ShadowCaster.cginc"
             ENDCG
         }
 //ToonCoreEnd
