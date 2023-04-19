@@ -35,21 +35,18 @@ public class IntroDetectorP2 : MonoBehaviour
     {
         if (_detectPlayer && !_hasTalked)
         {
-            Debug.Log("Player detected");
+
             if (_index < introductionDialogue.Length && _index == 0)
             {
                 enabledAll(false);
-                Debug.Log("------------------------ First line");
                 NextLine();
             }
             else if ((Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0)) && _index < introductionDialogue.Length)
             {
-                Debug.Log("------------------------ Next line");
                 NextLine();
             }
             else if ((Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0)) && _index == introductionDialogue.Length)
             {
-                Debug.Log("------------------------ End dialogue");
                 EndDialogue();
                 enabledAll(true);
                 _hasTalked = true;
@@ -65,7 +62,6 @@ public class IntroDetectorP2 : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         if (other.name.Equals("Player") || other.name.Equals("Unity_Chan_humanoid"))
         {
             _detectPlayer = true;

@@ -23,19 +23,19 @@ public class GameManagerCourse : MonoBehaviour
     IEnumerator Countdown()
     {
         yield return new WaitForSeconds(1);
-        Debug.Log("3");
+
         tricolorLights.SetProgress(1);
         audioSource.PlayOneShot(lowBeep);
         yield return new WaitForSeconds(1);
-        Debug.Log("2");
+
         tricolorLights.SetProgress(2);
         audioSource.PlayOneShot(lowBeep);
         yield return new WaitForSeconds(1);
-        Debug.Log("1");
+        
         tricolorLights.SetProgress(3);
         audioSource.PlayOneShot(lowBeep);
         yield return new WaitForSeconds(1);
-        Debug.Log("GO");
+        
         tricolorLights.SetProgress(4);
         audioSource.PlayOneShot(highBeep);
         StartRacing();
@@ -49,7 +49,7 @@ public class GameManagerCourse : MonoBehaviour
     void FreezePlayers(bool freeze)
     {
         // log the current state
-        Debug.Log("FreezePlayers: " + freeze);
+        //Debug.Log("FreezePlayers: " + freeze);
         
         //TODO : freeze players here
         playerControls.enabled = !freeze;

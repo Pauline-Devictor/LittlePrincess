@@ -7,8 +7,6 @@ public class LoadRace : MonoBehaviour
     public int sceneIndex;
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision detected");
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(sceneIndex);

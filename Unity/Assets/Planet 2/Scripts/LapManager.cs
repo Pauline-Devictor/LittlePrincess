@@ -20,7 +20,6 @@ public class LapManager : MonoBehaviour
             playerRanks.Add(new PlayerRank(carIdentity));
         }
         ListenCheckpoints(true);
-        Debug.Log("Lap "+ playerRanks[0].lapNumber + " / " + totalLaps);
         ui.UpdateLapText("Lap "+ playerRanks[0].lapNumber + " / " + totalLaps);
         mainPlayerRank = playerRanks.Find(player => player.identity.carName == "Player");
     }
@@ -64,7 +63,6 @@ public class LapManager : MonoBehaviour
                     {
 
                         // TODO : create attribute divername in CarIdentity 
-                        Debug.Log(" won");
                         //ui.UpdateLapText(player.identity. + " won");
 						SceneManager.LoadScene(9);
                     }
