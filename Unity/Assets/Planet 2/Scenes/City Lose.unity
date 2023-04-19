@@ -8130,7 +8130,7 @@ MonoBehaviour:
   dialogActive: 0
   dialog: []
   inFight: 0
-  dialogueHintButton: {fileID: 0}
+  dialogueHintButton: {fileID: 926039612}
   pokemon: {fileID: 0}
   audioSource: {fileID: 0}
   audioClips: []
